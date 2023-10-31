@@ -1,12 +1,7 @@
+import { Navbar } from "./components/Navbar";
 
-const App=()=> {
-  
-  return (
-    <div>
-     Shopping Cart
-    </div>
-   
-  )
-}
+const App = () => {
+  return <Navbar/>
+};
 
-export default App
+export default App;
