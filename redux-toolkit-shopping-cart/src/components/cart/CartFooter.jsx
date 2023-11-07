@@ -1,5 +1,6 @@
 import { useSelector,useDispatch } from "react-redux";
-import { clearCart } from "../../features/cart/cartSlice";
+
+import { openModal } from "../../features/modal/modalSlice";
 const CartFooter = () => {
   // Obtiene acceso a la variable 'total' definida en el store
   const { total } = useSelector((store) => store.cart);
@@ -13,7 +14,7 @@ const CartFooter = () => {
           Total <span>${total}</span>
         </h4>
       </div>
-      <button className="cart-footer__btn-clear" onClick={()=>dispatch(clearCart())}>Clear cart</button>
+      <button className="cart-footer__btn-clear" onClick={()=>dispatch(openModal())}>Clear cart</button>
     </footer>
   );
 };
